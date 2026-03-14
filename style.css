@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap&family=Roboto+Slab:wght@600&family=Roboto:wght@100;400&display=swap');
+
+/* Creates different divs */
+.header {
+  max-width: 675px;
+  height: 140px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footertitle {
+  max-width: 1500px;
+  margin: auto;
+  margin-bottom: 17px;
+  text-align: center;
+}
+
+.footer {
+  max-width: 1500px;
+  margin: auto;
+  background-color: rgb(77, 56, 50, 0.7);
+  margin-top:10px;
+	margin-bottom:20px;
+  text-align: center;
+}
+
+.map {
+  max-width: 1000px;
+  height: 400px;
+  margin-top:20px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Creates a gradient background - taken from www.w3schools.com*/
+body {
+  background-image: linear-gradient(#F8E0C1, #D3B391);
+}
+
+/* Sets different fonts and sizes for the titles and texts */
+h1 {
+	font-family: 'DM Serif Display';
+	color: #4D3832;
+	text-align: center;
+	margin-top:10px;
+	margin-bottom:-20px;
+}
+
+h2 {
+	font-family:'DM Serif Display';
+  letter-spacing: 1.5px;
+	color: #4D3832;
+   margin-bottom:-18px;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+  line-height: 20px;
+  color: #4D3832;
+}
+
+/* Makes footer text */
+.footer a {
+  color: #AECC8D;
+}
+
+.footer img {
+  margin-top: 20px;
+  margin-bottom: -5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Changes footer icons when cursor is hovered over it */
+.footer img:hover {
+  color: #AECC8D;
+  background-color: rgb(77, 56, 50, 0.8);
+}
+
+/* Creates the navigation bar */
+nav {
+	text-align: center;
+	color: rgb(76, 0, 255);
+	border: 0px solid #4D3832;
+	border-radius: 0px;
+  padding: 1px;
+  max-width: 1500px;
+	margin: auto;
+	font-family:'Roboto Slab', serif;
+  word-spacing: 5px;
+  color: #4D3832;
+  background-color: rgb(77, 56, 50, 0.7);
+	font-size: 1.5em;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Creates navigation titles */
+nav a {
+  color: #8EA77D;
+  text-decoration: none;
+  padding: 5px 60px;
+  display: inline-block;
+}
+
+/* Changes navigation text when cursor is hovered over it */
+nav a:hover {
+  color: #AECC8D;
+  background-color: rgb(77, 56, 50, 0.8);
+}
+
+/* All following code till the end of this css document is from www.w3schools.com*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #F8E0C1;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgb(77, 56, 50,0.6);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #F8E0C1;
+  font-size: 15px;
+  font-family: roboto;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #4D3832;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(77, 56, 50,0.4);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
