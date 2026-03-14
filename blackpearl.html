@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Boba Blog</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+
+<!-- following javascript code is from www.w3schools.com that creates my photo slideshow -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</head>
+
+<body>
+<!-- Creates banner and Navigation bar (now my own code)-->
+    <div class="header">
+        <img src="images5/banner.jpg" height="140" style="width:100%" alt="Website banner with swirly green patern as the background and text that reads Boba Blog"/>
+    </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="gongcha.html">Gong Cha</a>
+            <a href="blackpearl.html">Black Pearl</a>
+            <a href="noahsark.html">Noah's Ark</a>
+        </nav>
+<main>      
+<!-- Slideshow container (also from www.w3schools.com) -->
+    <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="images5/blackpearltop.jpeg" style="width:100%" alt="bubble tea lid with Black Pearl logo">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="images5/blackpearldrink.jpeg" style="width:100%" alt="Matcha bubble tea from Black Pearl">
+        </div>
+
+  <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<br>
+
+<!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+<!-- Title and paragraph of writing (now my own code)-->
+    <div class="content">
+        <h2>Review</h2>
+        <p>My friends and I ordered from Black Pearl on uber eats after a badminton tournament. Besides bubble tea they actuallt sell a wide range of asian dishes. The Black Pearl bubble tea menu has a lot of drink and topping choices. My order was a regular sized matcha milk tea with pearls, no ice and 70% sweetness. Our bubble tea order took 40 minutes to arrive which was a bit disappointing but at least the delivery was free.<br><br>I really like the unique shape of their cup. It was unfortumtely plastic as was the seel and the straw. They also have their logo on the seal like Gong Cha but their cups are a bit wider.<br><br>Since the sweetness level was 70%, the first sip was overwhelmingly sweet for me. After a while I got used to it but it still wasn’t preferable. The sweetness definitely overpowered the matcha taste but at least I could still taste that it was there. Overall I liked the drink but I almost couldn't taste he matcha over the sweetness.<br><br>The pearls were perfectly chewy and almost the idea size. They were bigger than the Gong Cha  so they got stuck in the straw once and it was hard to get unstuck. There was a bigger pearl to drink ratio than Gong Cha and Noah's Ark which I was obviously happy with.</p>
+
+<!-- Creates map of store location -->
+        <h2>Store location</h2>     
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.4989658486284!2d175.6114925157325!3d-40.35345937937248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d41b2da71f818c1%3A0x7eb74f19a20f07b2!2sBlack%20Pearl%20Cafe!5e0!3m2!1sen!2snz!4v1625437389051!5m2!1sen!2snz" style="width:100%" height="400" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+<!-- Creates footer of links -->
+    <div class="footertitle"> 
+        <h2>Contact me</h2>
+    </div>       
+    <div class="footer">
+        <a href="mailto:esguerraga@wgc.school.nz"><img src="images5/emailicon.png" style="width: 55px" alt="email icon"></a>
+        <a href="tel:0273603716"><img src="images5/phoneicon.png" style="width: 50px" alt="phone icon"></a>
+        <a href="http://www.instagram.com/gabi.viktoria"><img src="images5/instagramicon.png" style="width: 50px" alt="instagram icon"></a>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+    </div>  
+</main>
+
+</body>
