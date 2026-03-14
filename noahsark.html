@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Boba Blog</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    
+<!-- following javascript code is from www.w3schools.com that creates my photo slideshow -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</head>
+
+<body>
+<!-- Creates banner and Navigation bar (now my own code)-->
+    <div class="header">
+        <img src="images5/banner.jpg" height="140" style="width:100%" alt="Website banner with swirly green patern as the background and text that reads Boba Blog"/>
+    </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="gongcha.html">Gong Cha</a>
+            <a href="blackpearl.html">Black Pearl</a>
+            <a href="noahsark.html">Noah's Ark</a>
+        </nav>
+<main>      
+<!-- Slideshow container (also from www.w3schools.com) -->
+    <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="images5/noahsarktop.jpeg" style="width:100%" alt="Noah's Ark bubble tea lid with a bible verse about love">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="images5/noaharkdrink.jpeg" style="width:100%" alt="Matcha bubble tea from Noah Ark">
+        </div>
+
+  <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<br>
+
+<!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+<!-- Title and paragraph of writing (now my own code)-->
+    <div class="content">  
+        <h2>Review</h2>
+        <p> The design of Noah’s Ark stores are all really nice and tidy, with simple decorations. It took 20 minutes to get my drink because of a long waiting line. My order was a warm Matcha milk tea with pearls and 25% sugar which was $8.50. This was the most expensive drink out af all the drinks on this boba blog. This is because I had to get a large size since they only have that option. <br><br>It’s obvious that environmentally, Noah’s Ark has the best packaging out of all the bubble tea shops I went to. The cups and seal were recyclable, not plastic, and the straw was paper. Thie paper straws didn't get soggy over time and th cup kept my drink warm without burning my hand.<br><br>Since I got this as a warm drink I thought that it would give the matcha powder and creamer a better chance to dissolve but it didn’t. The matcha was terrible, it tasted like powdery water instead of sweet, creamy matcha. I would even prefer the Gong Cha japanese matcha milk tea over this.<br><br>The pearls redeemed the fact that the milk tea was terrible. The size allowed them to not get stuck in my straw and they were perfectly cooked so the pearls didn’t clump together.</p>
+        
+<!-- Creates map with store location -->
+        <h2>Store location</h2>     
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.24787186108!2d174.80452759754692!3d-41.256832894628225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38af1bf79ff171%3A0x7378b57ca8911029!2sNoah&#39;s%20Ark%20Teahouse%20Lambton%20Quay!5e0!3m2!1sen!2snz!4v1625437452021!5m2!1sen!2snz" style="width:100%" height="400" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    
+<!-- Creates foorter with links -->
+    <div class="footertitle"> 
+        <h2>Contact me</h2>
+    </div>
+    <div class="footer">
+        <a href="mailto:esguerraga@wgc.school.nz"><img src="images5/emailicon.png" style="width: 55px" alt="email icon"></a>
+        <a href="tel:0273603716"><img src="images5/phoneicon.png" style="width: 50px" alt="phone icon"></a>
+        <a href="http://www.instagram.com/gabi.viktoria"><img src="images5/instagramicon.png" style="width: 50px" alt="instagram icon"></a>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+    </div>  
+</main>
+
+</body>

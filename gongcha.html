@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Boba Blog</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    
+<!-- following javascript code is from www.w3schools.com that creates my photo slideshow -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active"; 
+        }
+    </script>
+</head>
+
+<body>
+<!-- Creates banner and Navigation bar (now my own code)-->
+    <div class="header">
+        <img src="images5/banner.jpg" height="140" style="width:100%" alt="Website banner with swirly green patern as the background and text that reads Boba Blog"/>
+    </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="gongcha.html">Gong Cha</a>
+            <a href="blackpearl.html">Black Pearl</a>
+            <a href="noahsark.html">Noah's Ark</a>
+        </nav>
+<main>      
+<!-- Slideshow container (www.w3schools.com)-->
+    <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="images5/gongchatop.jpg" style="width:100%" alt="bubble tea lid with Gong Cha logo">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="images5/gongchadrink.jpg" style="width:100%" alt="Matcha bubble tea from Gong Cha">
+        </div>
+
+  <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<br>
+
+<!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    
+<!-- Title and paragraph of writing (own code)-->
+    <div class="content">  
+        <h2>Review</h2>
+        <p>I went to visit the Lambton Quay store after school one day. There was no line when I got there and only one worker making drinks. I ordered the japanese matcha milk drink with extra pearls which came to a total of $7.30. The drink itself was $6.20 and I got a free student upsize and then the pearls were $1.10. I customized my drink by having no ice and 30% sugar because I don't like my drinks to be too sweet.<br><br>The cup was plastic and sealed with a plastic lid. The straw was also plastic which is terrible for the environment. I do like how the straw is red which makes it unique to their brand. To further advertise their brand, they put the logo on the seal. Convenience wise, I like the plastic seal because you can to carry it around, it won't spill.<br><br>The milk tea tasted a lot like seaweed so I think I should've gone with a higher sugar level to mask the bitterness. At least I could tell that it was genuine matcha used. Unfortunately the milk tea also left a powdery aftertaste meaning that the milk and powder weren't mixed well. Overall I didn’t mind this flavour but it definitely wasn't the best.<br><br>The pearls seemed small and not all sphere shaped. This meant hat there was less of a chance of them getting stuck in the straw. Some of the pearls weren't exactly sphere shaped and others were stuck together. They were soft and chewy, you could tell that the pearls were well cooked because there was no hard powdery part in the centre.</p>
+        <h2>Store location</h2> 
+        
+<!-- Creates map of the store location -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11992.261983892302!2d174.7757313!3d-41.285679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa43a7a41e085c3f4!2zR29uZyBjaGEgTGFtYnRvbiBRdWF5IOiyouiMtg!5e0!3m2!1sen!2snz!4v1625437220753!5m2!1sen!2snz" style="width:100%" height="400" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    
+<!-- Rest of code creates footer with links -->
+    <div class="footertitle"> 
+        <h2>Contact me</h2>
+    </div> 
+    <div class="footer">
+        <a href="mailto:esguerraga@wgc.school.nz"><img src="images5/emailicon.png" style="width: 55px" alt="email icon"></a>
+        <a href="tel:0273603716"><img src="images5/phoneicon.png" style="width: 50px" alt="phone icon"></a>
+        <a href="http://www.instagram.com/gabi.viktoria"><img src="images5/instagramicon.png" style="width: 50px" alt="instagram icon"></a>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></p>
+    </div>   
+</main>
+    
+</body>

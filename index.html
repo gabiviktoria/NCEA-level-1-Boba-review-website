@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Boba Blog</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+
+<!-- following code is from www.w3schools.com that creates my photo slideshow -->     
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active"; 
+        }
+    </script>
+</head>
+
+<body>
+<!-- Creates banner and navigation bar -->
+    <div class="header">
+        <img src="images5/banner.jpg" height="140" style="width:100%" alt="Website banner with swirly green patern as the background and text that reads Boba Blog">
+    </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="gongcha.html">Gong Cha</a>
+            <a href="blackpearl.html">Black Pearl</a>
+            <a href="noahsark.html">Noah's Ark</a>
+        </nav>
+<main>    
+<!-- Title and paragraph of writing above photo slideshow-->
+    <div class="content">  
+        <h2>About this webpage</h2>
+        <p>Hello and welcome to my boba blog!<br>Boba has many alternative names like tapioca tea, bubble tea or milk tea. Basically it’s a special taiwanese drink traditionally made with milk tea and sugared tapioca pearls. It was a drink created in Taiwan by a man named Liu Han Chie who owned a tea store in the 1980s. He decided to put some tapioca pearls in sweet tea and it became a hit. In the recent 2010s bubble tea has made its way to New Zealand with a variety of different stores opening in every city. Originally bubble tea is made from warm milk tea and chewy tapioca pearls which complement the creaminess of the milk tea. The more stores that have been opening the more that’ve had to be creative with different flavours and toppings. From fruit teas with popping pearls, slushies with red beans and even yogurt drinks with crushed oreos. As weird as these combinations might sound to you, it’s convenient because there’s a drink to satisfy anyone’s cravings. This is why bubble tea has been a huge success in all countries.<br></p>
+
+    </div>
+
+<!-- Slideshow container (also from www.w3schools.com)-->
+    <div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images5/gongchadrink.jpg" style="width:100%" alt="Matcha bubble tea from Gong Cha">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images5/blackpearldrink.jpeg" style="width:100%" alt="Matcha bubble tea from Black Pearl">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images5/noaharkdrink.jpeg" style="width:100%" alt="Matcha bubble tea from Noah's Ark">
+        </div>
+
+<!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<br>
+
+<!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>  
+
+<!-- Paragraph of writing under the photo slideshow -->
+    <div class="content">
+        <p>My favorite memory is walking from my primary school in year 8 to get Noah’s Ark with my friends. Or maybe after badminton tournaments my team will visit Gong Cha to relax and unwind a bit. All my memories at bubble tea stores have been fun and meaningful. Now I’m going to take bubble tea a bit more seriously and test out three different stores around the Wellington region to review their drinks and compare them to each other. I’ve decided to visit Gong Cha, Noah’s ark and Black Pearl. A warm matcha milk tea with pearls is my go to drink when it’s cold, so this is perfect for the winter time. At each store I'll order this drink and compare them to each other. I’ll be judging the bubble tea based on milk tea taste, pearls, price and packaging</p>
+    </div>
+<!-- Rest of code creates footer with links -->
+    <div class="footertitle"> 
+        <h2>Contact me</h2>
+    </div>
+    <div class="footer">
+        <a href="mailto:esguerraga@wgc.school.nz"><img src="images5/emailicon.png" style="width: 55px" alt="email icon"></a>
+        <a href="tel:0273603716"><img src="images5/phoneicon.png" style="width: 50px" alt="phone icon"></a>
+        <a href="http://www.instagram.com/gabi.viktoria"><img src="images5/instagramicon.png" style="width: 50px" alt="instagram icon"></a>
+        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+    </div> 
+</main>
+
+</body>
